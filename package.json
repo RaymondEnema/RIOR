@@ -1,0 +1,16 @@
+{
+  "name": "rior",
+  "version": "1.0.0",
+  "description": "RIOR - Hotel Management System",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "concurrently \"npm run build:backend\" \"npm run build:frontend\"",
+    "start": "node backend/dist/server.js"
+  },
+  "workspaces": ["backend", "frontend"],
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
